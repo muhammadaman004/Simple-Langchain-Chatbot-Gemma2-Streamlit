@@ -9,7 +9,6 @@ The Langchain Chatbot Demo uses the LangChain framework and the Ollama model Gem
 ## 🚀 Features
 
 - **Interactive Chat Interface:** The chatbot provides a smooth chat experience with real-time question-answering capabilities.
-- **State Management:** Chat history is maintained during the session for continuous conversation flow.
 - **Customizable Prompt:** Easily adjustable prompts to fine-tune the assistant’s behavior.
 
 ## 🛠️ Tech Stack
@@ -24,8 +23,34 @@ The Langchain Chatbot Demo uses the LangChain framework and the Ollama model Gem
 Follow these steps to set up the project locally:
 
 1. **Clone the repository:**
-
    ```bash
    git clone https://github.com/your-username/langchain-chatbot-demo.git
    cd langchain-chatbot-demo
 
+2. **Create a virtual environment:**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+
+4. **Download the Gemma2 Model:**
+
+    Ensure you have the Ollama CLI installed on your system. To download the Gemma2 model, run the following command:
+    ```bash
+    ollama pull gemma2:2b
+    ```
+    This step is essential to ensure the model is available for the chatbot to use.
+
+5. **Create a .env file:**
+
+    In the root directory, create a .env file and add your API keys:
+    ```bash
+    LANGCHAIN_API_KEY=your_langchain_api_key
+    LANGCHAIN_PROJECT=your_langchain_project
+
+6. **Run the Streamlit app:**
+    ```bash
+    streamlit run app.py
